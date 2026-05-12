@@ -1,4 +1,4 @@
-# 🔐 simple-php-auth
+# 🔐 Auth-page
 
 Sistem autentikasi sederhana berbasis PHP Native & MySQL — mencakup registrasi, login, proteksi halaman, dan logout.
 
@@ -19,10 +19,11 @@ Sistem autentikasi sederhana berbasis PHP Native & MySQL — mencakup registrasi
 
 ```
 Auth/
-   ├── login.php        # Halaman login & register
-   ├── aksi.php         # Handler login, register, logout
-   ├── dashboard.php    # Halaman dashboard (protected)
-   └── style.css        # Styling halaman login dan register
+   auth-page
+      ├── login.php        # Halaman login & register
+      ├── aksi.php         # Handler login, register, logout
+      ├── dashboard.php    # Halaman dashboard (protected)
+      └── style.css        # Styling halaman login dan register
 └── koneksi.php      # Konfigurasi koneksi database
 ```
 
@@ -59,7 +60,7 @@ Auth/
 
 4. **Sesuaikan `koneksi.php`**
    ```php
-   $conn = mysqli_connect("localhost", "root", "", "users_auth");
+   $koneksi = mysqli_connect("localhost", "root", "", "users_auth");
    ```
 
 5. **Jalankan di browser**
