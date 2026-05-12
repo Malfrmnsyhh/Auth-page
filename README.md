@@ -18,11 +18,12 @@ Sistem autentikasi sederhana berbasis PHP Native & MySQL — mencakup registrasi
 ## 🗂️ Struktur File
 
 ```
-simple-php-auth/
-├── koneksi.php      # Konfigurasi koneksi database
-├── login.php        # Halaman login & register
-├── aksi.php         # Handler login, register, logout
-└── dasbor.php       # Halaman dashboard (protected)
+Auth/
+   ├── login.php        # Halaman login & register
+   ├── aksi.php         # Handler login, register, logout
+   ├── dashboard.php    # Halaman dashboard (protected)
+   └── style.css        # Styling halaman login dan register
+└── koneksi.php      # Konfigurasi koneksi database
 ```
 
 ---
@@ -31,12 +32,12 @@ simple-php-auth/
 
 1. **Clone repo ini**
    ```bash
-   git clone https://github.com/username/simple-php-auth.git
+   git clone https://github.com/Malfrmnsyhh/Auth-page
    ```
 
 2. **Pindahkan ke folder XAMPP**
    ```bash
-   mv simple-php-auth/ /xampp/htdocs/
+   Auth-page/ /xampp/htdocs/
    ```
 
 3. **Buat database & tabel**
@@ -49,10 +50,10 @@ simple-php-auth/
 
    CREATE TABLE users (
        id             INT AUTO_INCREMENT PRIMARY KEY,
-       nama           VARCHAR(100)  NOT NULL,
-       email          VARCHAR(150)  NOT NULL UNIQUE,
-       password       VARCHAR(255)  NOT NULL,
-       tanggal_daftar DATETIME      DEFAULT CURRENT_TIMESTAMP
+       nama           VARCHAR(100) ,
+       email          VARCHAR(150) ,
+       password       VARCHAR(255) ,
+       tanggal_daftar DATETIME DEFAULT CURRENT_TIMESTAMP
    );
    ```
 
@@ -63,7 +64,7 @@ simple-php-auth/
 
 5. **Jalankan di browser**
    ```
-   http://localhost/simple-php-auth/login.php
+   http://localhost/Auth-page/login.php
    ```
 
 ---
@@ -89,6 +90,3 @@ dasbor.php →  aksi.php?action=logout  →  login.php
 
 ---
 
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan tugas akademik. Bebas digunakan dan dimodifikasi.
